@@ -45,13 +45,28 @@
 		.colorCus {
 			color: rgb(223, 27, 119);
 			font-weight: bold;
-			font-size: 48;
+			font-size: 36px;
 		}
 		.colorCus2 {
 			color: rgb(247, 62, 45);
-			font-size: 56 !important;
-			font-family: "Comic Sans";
+			font-size: 24px !important;
+			font-family: "Comic Sans" !important;
 		}
+    #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%; 
+      min-height: 100%;
+    }
+    
+    .content {
+      position: fixed;
+      bottom: 0;
+      color: #f1f1f1;
+      width: 100%;
+      padding: 20px;
+    }
     </style>
 
 </head>
@@ -59,19 +74,23 @@
 <body class="goto-here">
 
 		
-	<section class="ftco-section img" style="background-image: url(images/bg_1.jpg);">
-    	<div class="container">
+	<section class="ftco-section img" style="background-image: url(images/bg1.jpg);">
+    <video autoplay muted loop id="myVideo" class="mt-2">
+      <source src="images/video.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video> 
+    	<div class="container content">
 				<div class="row justify-content-end">
           <div class="col-md-6 ftco-animate deal-of-the-day ftco-animate">
-          	<span class="subheading colorCus2">Hello there - Nice to see you</span>
+          	<h3 class="subheading colorCus2">Hello there - Nice to see you</h3>
             <h2 class="mb-4 colorCus">Cùng đếm ngược tới một ngày đặc biệt nhe</h2>
-            <p class="colorCus2">Đoán xem đếm xong, tui có điều gì cho bạn</p>
+            <h3 class="colorCus2">Đoán xem đếm xong, tui có điều gì cho bạn</h3>
             <h3 class="colorCus	">Countdown</h3>
             <div id="CountTime" class="d-flex mt-5">
-						  <div class="CountTime" id="day"></div>
-						  <div class="CountTime pl-3" id="hour"></div>
-						  <div class="CountTime pl-3" id="min"></div>
-						  <div class="CountTime pl-3" id="sec"></div>
+						  <h3 class="CountTime colorCus2" id="day"></h3>
+						  <h3 class="CountTime pl-3 colorCus2" id="hour"></h3>
+						  <h3 class="CountTime pl-3 colorCus2" id="min"></h3>
+						  <h3 class="CountTime pl-3 colorCus2" id="sec"></h3>
 						</div>
           </div>
         </div>   		
@@ -87,7 +106,7 @@
   <!-- loader -->
   <script>
 	// Set the date we're counting down to
-	var countDownDate = new Date("Jan 2, 2023 00:00:00").getTime();
+	var countDownDate = new Date("Jan 20, 2023 00:00:00").getTime();
 	
 	// Update the count down every 1 second
 	var x = setInterval(function() {
