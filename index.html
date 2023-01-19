@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Happy birthday- my sweetie</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        canvas {
+            cursor: crosshair;
+            display: block;
+        }
+
+        .bodyCus {
+            background: #000;
+            margin: 0;
+        }
+		.colorCus {
+			color: rgb(223, 27, 119);
+			font-weight: bold;
+			font-size: 48;
+		}
+		.colorCus2 {
+			color: rgb(247, 62, 45);
+			font-size: 56 !important;
+			font-family: "Comic Sans";
+		}
+    </style>
+
+</head>
+
+<body class="goto-here">
+
+		
+	<section class="ftco-section img" style="background-image: url(images/bg_1.jpg);">
+    	<div class="container">
+				<div class="row justify-content-end">
+          <div class="col-md-6 ftco-animate deal-of-the-day ftco-animate">
+          	<span class="subheading colorCus2">Hello there - Nice to see you</span>
+            <h2 class="mb-4 colorCus">Cùng đếm ngược tới một ngày đặc biệt nhe</h2>
+            <p class="colorCus2">Đoán xem đếm xong, tui có điều gì cho bạn</p>
+            <h3 class="colorCus	">Countdown</h3>
+            <div id="CountTime" class="d-flex mt-5">
+						  <div class="CountTime" id="day"></div>
+						  <div class="CountTime pl-3" id="hour"></div>
+						  <div class="CountTime pl-3" id="min"></div>
+						  <div class="CountTime pl-3" id="sec"></div>
+						</div>
+          </div>
+        </div>   		
+    	</div>
+		<br>	
+		<br>	
+		<br>	
+
+    </section>
+	
+  
+
+  <!-- loader -->
+  <script>
+	// Set the date we're counting down to
+	var countDownDate = new Date("Jan 2, 2023 00:00:00").getTime();
+	
+	// Update the count down every 1 second
+	var x = setInterval(function() {
+	
+	  // Get today's date and time
+	  var now = new Date().getTime();
+	
+	  // Find the distance between now and the count down date
+	  var distance = countDownDate - now;
+	
+	  // Time calculations for days, hours, minutes and seconds
+	  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	
+	  // Display the result in the element with id="demo"
+	  document.getElementById("day").innerHTML = days + "d " ;
+	  document.getElementById("hour").innerHTML = hours + "h ";
+	  document.getElementById("min").innerHTML = minutes + "m ";
+	  document.getElementById("sec").innerHTML =seconds + "s ";
+	
+	  // If the count down is finished, write some text
+	  if (distance < 0) {
+		clearInterval(x);
+		document.getElementById("CountTime").innerHTML = `<a name="" id="" class="btn btn-primary" href="next1.html" role="button">Go to memory</a>`;
+	  }
+	}, 1000);
+
+
+
+	</script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
